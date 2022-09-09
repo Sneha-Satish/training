@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> current time: <output id="op"></output></h1>
+    <video width="550" height="400" loop poster="images/images/antman.jpg" id="vid">
+        <source src="media/html5.mp4">
+        <sorce src="media/html5.webm">
+    </video>
+    <button onclick="playaudi()">play</button>
+    <button onclick="pauseaudi()">pause</button>
+    <button onclick="stopaudi()">stop</button>
+    <button onclick="rewindaudi()">rewind</button>
+    <button onclick="increasevol()">Increase volume </button>
+    <button onclick="decreasevol()">Decrease volume </button>
+    <script>
+        setInterval(function(){
+            document.getElementById("op").value=document.getElementById("vid").currentTime;
+        },10);
+        function playaudi(){
+            document.getElementById("audi").play();
+        }
+        function pauseaudi(){
+            document.getElementById("audi").pause();
+        }
+        function stopaudi(){
+            document.getElementById("audi").pause();
+            document.getElementById("audi").currentTime=0;
+        }
+        function rewindaudi(){
+            document.getElementById("audi").currentTime=document.getElementById("audi").currentTime-1;
+        }
+        function increasevol(){
+            document.getElementById("audi").currentTime=document.getElementById("audi").volume+=0.1;
+        }
+        function decreasevol(){
+            document.getElementById("audi").currentTime=document.getElementById("audi").volume-=.01;
+        }
+    </script>
+    
+</body>
+</html>

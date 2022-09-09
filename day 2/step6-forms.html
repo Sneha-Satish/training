@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Registration Form </h1>
+    <form action="#" method="get">
+        <table>
+            <tbody>
+                <tr>
+                    <th> User name </th>
+                    <td> <input autofocus name="uname" autocomplete="off" placeholder = "Enter the first name" type="text"/> </td>
+                </tr>
+                <tr>
+                    <th> User Email </th>
+                    <td> <input name="email" required pattern="\S+@\S+\.\S+" placeholder = "personal mail" type="email"/> </td>
+                </tr>
+                <tr>
+                    <th> User Phone </th>
+                    <td> <input autofocus title="###-####-####" pattern="\d{3}-\d{4}-\d{4}" placeholder = "official" type="tel"/> </td>
+                </tr>
+                <tr>
+                    <th> &nbsp; </th>
+                    <td> <input type="submit" value="Register"/> </td>
+                </tr>
+            </tbody>
+    </form> 
+    </table>
+    <datalist id="roles">
+        <option value="software developer"></option>
+        <option value="software tester"></option>
+        <option value="software architect"></option>
+    </datalist>
+</body>
+</html>
