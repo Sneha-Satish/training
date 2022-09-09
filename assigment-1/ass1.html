@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas with images</title>
+    <style>
+        canvas{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="1000" id="can"></canvas>
+    
+    <script>
+        var ctx=document.getElementById("can").getContext("2d");
+        ctx.rotate((Math.PI/180)*15)
+        var img1=new Image(300,300);
+            img1.src="images1/spiderman.jpg";
+            img1.onload=function(){
+              
+                ctx.drawImage(img1,200,50);
+                ctx.beginPath();
+                ctx.strokeStyle="black";
+                ctx.fillStyle="grey";
+                ctx.fillRect(200,5,300,50);
+                ctx.font="bold 30px arial"
+                ctx.fillStyle="black";
+                ctx.fillText("SPIDERMAN",220,40);
+        
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+        var ctx=document.getElementById("can").getContext("2d");
+            var img2=new Image();
+            img2.src="images1/hulk.jpg";
+            img2.onload=function(){
+            ctx.drawImage(img2,500,50);
+            
+                ctx.beginPath();
+                ctx.strokeStyle="black";
+                ctx.fillStyle="grey";
+                ctx.fillRect(500,5,300,50);
+                ctx.font="bold 30px arial"
+                ctx.fillStyle="black";
+                ctx.fillText("HULK",570,40);
+               
+                ctx.stroke();
+                ctx.closePath();
+            }   
+
+        var ctx=document.getElementById("can").getContext("2d");
+        var img3=new Image();
+            img3.src="images1/blackpanther.jpg";
+            img3.onload=function(){
+            ctx.drawImage(img3,200,350);
+            
+                ctx.beginPath();
+                ctx.strokeStyle="black";
+                ctx.fillStyle="grey";
+                ctx.fillRect(200,620,300,50);
+                ctx.font="bold 30px arial"
+                ctx.fillStyle="black";
+                ctx.fillText("BLACK PANTER",200,650);
+                
+                ctx.stroke();
+                ctx.closePath();
+            }   
+
+        var ctx=document.getElementById("can").getContext("2d");
+        var img4=new Image();
+            img4.src="images1/batman.jpg";
+            img4.onload=function(){
+                
+            ctx.drawImage(img4,500,350);
+            
+                ctx.beginPath();
+                ctx.strokeStyle="black";
+                ctx.fillStyle="grey";
+                ctx.fillRect(500,620,300,50);
+                ctx.font="bold 30px arial"
+                ctx.fillStyle="black";
+                ctx.fillText("BATMAN",540,650);
+                
+                ctx.stroke();
+                ctx.closePath();
+            }   
+
+
+
+        
+        
+
+        
+    </script>
+</body>
+</html>
