@@ -1,0 +1,21 @@
+
+        section{
+            width: 1400px;
+            height: 800px;
+            border: 5px solid black;
+            margin: 2px;
+            background-color: red;
+        }
+        article{
+            width:80px;
+            height:40px;
+            background-color: yellow;
+            margin: 2px;
+            float:left
+        }
+        #photo{
+            background-image: url(img/antman.jpg);
+            width: 100px;
+            height: 100px;
+
+        }

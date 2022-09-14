@@ -1,0 +1,20 @@
+section{
+    width: 1400px;
+    height: 800px;
+    border: 5px solid black;
+    margin: 2px;
+    background-color: rgb(159, 206, 29);
+}
+article{
+    width:80px;
+    height:40px;
+    background-color: rgb(223, 30, 136);
+    margin: 2px;
+    float:left
+}
+#photo{
+    background-image: url(img/antman.jpg);
+    width: 100px;
+    height: 100px;
+
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <style>
+        h1{
+            text-align: center;
+            font-size:110px;
+            color: black;
+        }
+        .t2{
+            font-size: 20px;
+        }
+        .t3{
+            font-size: 20px;
+            font-style:italic;
+            margin:25px;
+        }
+        .t4{
+            font-size: 20px;
+            margin: 25px;
+            text-align: justify;
+        }
+        h6{
+            font-style: italic;
+            font-size: 15px;
+            text-align: center;
+        }
+        b{
+            color: rgb(139, 17, 17);
+            
+        }
+        p{
+            border: 2px solid black;
+        }
+        .t7{
+            font-size: 15px;
+
+        }
+        
+        
+        /*@media screen and (max-width:480px)
+        {
+            column{
+                float:none;
+            }
+        }*/
+        
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1> A LIST APART </h1>
+    <div class="text-center"> 
+        <img src="img/foot.jpg" class="rounded img-fluid" alt="...."></div>
+    <div class="text-center">
+        <p><strong> Responsive Web Design </strong>
+        <br>
+         by Ethan MarcotteMay 25, 2010 
+        <br>
+        Published in CSS, Interaction Design, Layout & Grids, Mobile/Multidevice, Responsive Design </p>
+    </div>
+    <div class="row text-center t2">
+     
+        <div class="col"> <strong>The control which designers know in the print medium, and often desire in the  web medium, is simply a function of the limitation of the printed page. We should embrace the fact that the web doesn’t have the same constraints, and  design for this flexibility. But first, we must 'accept the ebb and flow of things.' </strong>
+    </div> <br>
+    <div class="row text-center t3">
+        <div class="col"> -John Allsopp, “A Dao of Web Design” </div>
+    </div>
+
+    <div class="row t4">
+        <div class="col"> <img src="img/new.jpg" alt="">></div>
+        <div class="col col-xxl-6"> The English architect Christopher Wren once quipped that his chosen field “aims for Eternity,” and there’s something appealing about that formula: Unlike the web, which often feels like aiming for next week, architecture is a discipline very much defined by its permanence. 
+    
+    <br><br> 
+    A building’s foundation defines its footprint, which defines its frame, which shapes the facade. Each phase of the architectural process is more immutable, more unchanging than the last. Creative decisions quite literally shape a physical space, defining the way in which people move through its confines for decades or even centuries.
+   
+    <br><br>
+    Working on the web, however, is a wholly different matter. Our work is defined by its transience, often refined or replaced within a year or two. Inconsistent window widths, screen resolutions, user preferences, and our users’ installed fonts are but a few of the intangibles we negotiate when we publish our work, and over the years, we’ve become incredibly adept at doing so..
+    
+    <br><br>
+     But the landscape is shifting, perhaps more quickly than we might like. Mobile browsing is expected to outpace desktop-based access within three to five years. Two of the three dominant video game consoles have web browsers (and one of them is quite excellent). We’re designing for mice and keyboards, for T9 keypads, for handheld game controllers, for touch interfaces. In short, we’re faced with a greater number of devices, input modes, and browsers than ever before.
+    
+    <br><br>
+    In recent years, I’ve been meeting with more companies that request “an iPhone website” as part of their project. It’s an interesting phrase: At face value, of course, it speaks to mobile WebKit’s quality as a browser, as well as a powerful business case for thinking beyond the desktop. But as designers, I think we often take comfort in such explicit requirements, as they allow us to compartmentalize the problems before us. We can quarantine the mobile experience on separate subdomains, spaces distinct and separate from “the non-iPhone website.” But what’s next? An iPad website? An N90 website? Can we really continue to commit to supporting each new user agent with its own bespoke experience? At some point, this starts to feel like a zero sum game. But how can we—and our designs—adapt?
+    <br> <br>
+    <b> A flexible foundation </b>
+    <br> <br>
+    Let’s consider an example design. I’ve built a simple page for a hypothetical magazine; it’s a straightforward two-column layout built on a fluid grid, with not a few flexible images peppered throughout. As a long-time proponent of non-fixed layouts, I’ve long felt they were more “future proof” simply because they were layout agnostic. And to a certain extent, that’s true: flexible designs make no assumptions about a browser window’s width, and adapt beautifully to devices that have portrait and landscape modes.
+    <br> <br>
+    <img src="img/f-img-default-wide.webp" alt="">
+    <h6> Huge images are huge. Our layout, flexible though it is, doesn’t respond well to changes in resolution or viewport size.</h6>
+    <br><br>
+    But no design, fixed or fluid, scales seamlessly beyond the context for which it was originally intended. The example design scales perfectly well as the browser window resizes, but stress points quickly appear at lower resolutions. When viewed at viewport smaller than 800×600, the illustration behind the logo quickly becomes cropped, navigation text can wrap in an unseemly manner, and the images along the bottom become too compact to appear legible. And it’s not just the lower end of the resolution spectrum that’s affected: when viewing the design on a widescreen display, the images quickly grow to unwieldy sizes, crowding out the surrounding context.
+    <br> <br>
+    In short, our flexible design works well enough in the desktop-centric context for which it was designed, but isn’t optimized to extend far beyond that.
+    <br><br>
+    <b> Becoming responsive</b>
+    <br><br>
+    Recently, an emergent discipline called “responsive architecture” has begun asking how physical spaces can respond to the presence of people passing through them. Through a combination of embedded robotics and tensile materials, architects are experimenting with art installations and wall structures that bend, flex, and expand as crowds approach them. Motion sensors can be paired with climate control systems to adjust a room’s temperature and ambient lighting as it fills with people. Companies have already produced “smart glass technology” that can automatically become opaque when a room’s occupants reach a certain density threshold, giving them an additional layer of privacy.
+    <br><br>
+    In their book Interactive Architecture, Michael Fox and Miles Kemp described this more adaptive approach as “a multiple-loop system in which one enters into a conversation; a continual and constructive information exchange.” Emphasis mine, as I think that’s a subtle yet powerful distinction: rather than creating immutable, unchanging spaces that define a particular experience, they suggest inhabitant and structure can—and should—mutually influence each other.
+    <br><br>
+    This is our way forward. Rather than tailoring disconnected designs to each of an ever-increasing number of web devices, we can treat them as facets of the same experience. We can design for an optimal viewing experience, but embed standards-based technologies into our designs to make them not only more flexible, but more adaptive to the media that renders them. In short, we need to practice responsive web design. But how?
+    <br><br>
+    <b>Meet the media query</b>
+    <br><br>
+    Since the days of CSS 2.1, our style sheets have enjoyed some measure of device awareness through media types. If you’ve ever written a print style sheet, you’re already familiar with the concept:
+    <br><br>
+    <img src="img/sp1.jpg" alt="">
+    In the hopes that we’d be designing more than neatly formatted page printouts, the CSS specification supplied us with a bevy of acceptable media types, each designed to target a specific class of web-ready device. But most browsers and devices never really embraced the spirit of the specification, leaving many media types implemented imperfectly, or altogether ignored.
+    <br><br>
+    Thankfully, the W3C created media queries as part of the CSS3 specification, improving upon the promise of media types. A media query allows us to target not only certain device classes, but to actually inspect the physical characteristics of the device rendering our work. For example, following the recent rise of mobile WebKit, media queries became a popular client-side technique for delivering a tailored style sheet to the iPhone, Android phones, and their ilk. To do so, we could incorporate a query into a linked style sheet’s media attribute:
+    
+    <img src="img/sp2.jpg" alt="">
+    
+
+    </div>
+    
+    
+    <div class="col"> <img src="img/ss.jpg" alt=""></div>
+    <div class="row t6"> 
+        <div class="col"></div>
+        <div class="col col-xxl-6">
+            <img src="img/auth.jpg" alt="">
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row t7"> 
+        <div class="col col-xxl-6">
+            <h2> 100 Readers Comments </h2> <br> <br>
+            <p> 
+                Ethan May 25, 2010 at 11:07 am<br>
+                All this is inferring that the mobile browser supports media queries. Otherwise, we’re sunk.</p> </div>
+
+        <div class="col col-xxl-4">
+            <h2> More from ALA </h2> <br> <br>
+            <b>Mobile-First CSS: Is It Time for a Rethink?</b><br>
+by Patrick Clancey<br>
+Is mobile-first CSS always the best option? Patrick <br>Clancey explores the pros and cons and lays out an alternative.<br>
+CodeJune 08, 2022<br><br>
+<b>Designers, (Re)define Success First</b><br>
+by Lennart Overkamp<br>
+Learn how to engage stakeholders, focus on impactful<br> objectives, and measure the results in this template <br>for ethical design.<br>
+Industry May 12, 2022<br><br>
+<b>Breaking Out of the Box</b><br>
+by Patrick Brosset<br>
+What can we do with thirty pixels? Windows Controls<br> Overlay frees us from 40 years of history telling us<br> how apps should look.<br>
+CodeDecember 09, 2021<br><br>
+<b>How to Sell UX Research with Two Simple Questions</b><br>
+by Sophia V. Prater<br>
+Seriously, do not ever design screens again without<br> first answering these questions: what are the objects <br>and how do they relate?<br>
+User ExperienceOctober 21, 2021<br><br>
+<b>A Content Model Is Not a Design System</b><br>
+by Mike Wills<br>
+Why do so many content models still look more like<br> design systems rather than reflecting structured data?<br> Mike Wills takes us on a personal journey as he <br> examines his own past experiences and invites us to<br> conceive content models that articulate meaning and<br> group related content together for use on any channel.<br>
+ContentSeptember 23, 2021<br> <br>
+                       
+        
+
+
+
+
+
+   
+    
+   </div> 
+</body>
+</html>

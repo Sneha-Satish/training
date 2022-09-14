@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes valtech{
+            0%{
+               background-color:aquamarine;
+               transform: rotate(0deg) scale(1,1) skew(25deg) translate(50px,100px);
+               border-radius: 0%;
+            }
+            20%{
+                background-color: navy;
+                transform: rotate(30deg) scale(2,2) skew(35deg) translate(50px,100px);
+                border-radius: 10%;
+            }
+            40%{
+                background-color: blueviolet;
+                transform: rotate(90deg) scale(1,1) skew(45deg) translate(50px,100px);
+                border-radius: 20%;
+            }
+            60%{
+                background-color: brown;
+                transform: rotate(0deg) scale(1.5,1.5) skew(25deg) translate(50px,200px);
+                border-radius: 30%;
+            }
+            80%{
+                background-color: purple;
+                transform: rotate(60deg) scale(2,2) skew(15deg) translate(150px,100px);
+                border-radius: 40%;
+            }
+            100%{
+                background-color: aquamarine;
+                transform: rotate(0deg) scale(1,1) skew(25deg) translate(50px,100px);
+                border-radius: 50%;
+            }
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: aquamarine;
+        }
+        .box{
+            animation-name: valtech;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
