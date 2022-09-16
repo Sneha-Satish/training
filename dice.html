@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    
+</head>
+<body>
+   
+   <p id="dice"></p>
+
+   <img id="pic" src="" width="10%" height="auto"></br>
+   <p id="dice1"></p>
+   <img id="pic1" src="" width="10%" height="auto"></br>
+   <p id="sum"> </p>
+
+   <button onclick="clickevent()">Roll!</button>
+
+   <script>
+        var para;
+        var rannum;
+        var rannum1;
+        function clickevent(){
+            rannum = Math.floor(Math.random() * 6) + 1;
+            rannum1 = Math.floor(Math.random() * 6) + 1;
+            para = document.getElementById("dice");
+            para.innerHTML = rannum;
+            para1 = document.getElementById("dice1");
+            para1.innerHTML = rannum1;
+            document.getElementById("sum").innerHTML=rannum+rannum1;
+            
+
+            if(rannum==1){
+
+                document.getElementById("pic").src = "C:/valtech training/day 8-assign/myimg/dice1.png";
+
+            }
+
+            if(rannum==2){
+
+                document.getElementById("pic").src = "C:/valtech training/day 8-assign/myimg/d2.png";
+
+            }
+
+            if(rannum==3){
+
+                document.getElementById("pic").src = "C:/valtech training/day 8-assign/myimg/d3.png";
+
+            }
+
+            if(rannum==4){
+
+                document.getElementById("pic").src = "C:/valtech training/day 8-assign/myimg/d4.png";
+
+            }
+
+            if(rannum==5){
+
+                document.getElementById("pic").src = "C:/valtech training/day 8-assign/myimg/d5.png";
+
+            }
+
+            if(rannum==6){
+
+                document.getElementById("pic").src = "C:/valtech training/day 8-assign/myimg/d6.png";
+
+            }
+
+        
+       
+
+            if(rannum1==1){
+
+                document.getElementById("pic1").src = "C:/valtech training/day 8-assign/myimg/dice1.png";
+            }
+
+            if(rannum1==2){
+
+                document.getElementById("pic1").src = "C:/valtech training/day 8-assign/myimg/d2.png";
+
+            }
+
+            if(rannum1==3){
+
+                document.getElementById("pic1").src = "C:/valtech training/day 8-assign/myimg/d3.png";
+
+            }
+
+            if(rannum1==4){
+
+                document.getElementById("pic1").src = "C:/valtech training/day 8-assign/myimg/d4.png";
+
+            }
+
+            if(rannum1==5){
+
+                document.getElementById("pic1").src = "C:/valtech training/day 8-assign/myimg/d5.png";
+
+            }
+
+            if(rannum1==6){
+
+                document.getElementById("pic1").src = "C:/valtech training/day 8-assign/myimg/d6.png";
+
+            }
+
+        }
+        
+   </script>
+</body>
+</html>
