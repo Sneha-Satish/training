@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block-scope</title>
+    <script>
+        var company={
+            title:"valtech",
+            year:1980
+        };
+
+        function checkYear(){
+            if(company.year>1975){
+                let tempTitle= company.title;
+                company.title=tempTitle+"is a old company";
+                console.log(company.title);
+            }
+            console.log(company);
+        }
+        checkYear();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

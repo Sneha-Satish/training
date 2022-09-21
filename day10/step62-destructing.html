@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing</title>
+    <script>
+        var hero={
+            title:"antman",
+            firstname:"bruce",
+            lastname:"lee",
+            city:"Antartica",
+            power:10
+            
+
+        };
+
+        var {title:herotitle,firstname:herofirstname,city:herocity,lastname:herolastname,power:heropower}=hero;
+        console.log(hero.city);
+        hero.city="Andaman";
+        console.log(hero.city);
+        console.log(herocity);
+
+        function getfavCities(){
+            return ['banglore', 'mysore','hyderabad','pune']
+        };
+
+        /*var [firstCity,seconCity,thirdCity,fourthCity]=getfavCities();
+        console.log(seconCity.toUpperCase().length);*/
+
+        var allVals=JSON.parse(JSON.stringify(hero));
+        console.log(allVals.title);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ironman={
+            firstname:"Tony",
+            lastname:"stark",
+            power:7,
+            fullname:function(message,city){
+                return message+""+this.firstname+" "+this.lastname+" "+city;
+            }
+
+        }
+        var spiderman={
+            firstname:"Peter",
+            lastname:"parker",
+            power:6,
+            fullname:function(message,city){
+                return this.firstname+" "+lastname+"is from New York"
+            
+            }
+
+        }
+        var batman={
+            firstname:"bruce",
+            lastname:"stark",
+            power:8,
+            fullname:function(message,city){
+                return this.firstname+" "+lastname+"is from London"
+            }
+
+        }
+        console.log(ironman.fullname)("i am ", "from Paris");
+        console.log(ironman.fullname.call(spiderman));
+        console.log(ironman.fullname.call(hulk));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
