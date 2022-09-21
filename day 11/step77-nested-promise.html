@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          var firstPromise=function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve((console.log("outer promise resolved"),secondPromise()));
+                    }else{
+                        rejected("error from the FirstPromise")
+                    }
+                },1000)
+            })   
+        } 
+        
+        var secondPromise=function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("resolve message from secondPromise nested")
+                    }else{
+                        reject("error")
+                    }
+                },3000)
+            })
+        }
+         
+                
+
+
+       
+        firstPromise().then(function(message){
+            console.log(message);
+        }).catch(function(error){
+            console.log(error)
+        }).finally(function(){
+            console.log("completed");
+        })
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

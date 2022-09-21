@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var FirstPromise=function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("Resolve Message from First Promise")
+                    }
+                },1000)
+            })
+        }
+        var SecondPromise=function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("Resolved Message from Second Promise")
+                    }
+                },2000)
+            })
+        }
+        var ThirdPromise=function(){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    if(true){
+                        resolve("Resolved Messages from Third Promise")
+                    }
+                },1000)
+            })
+        }
+
+        Promise.race((FirstPromise(),SecondPromise(),ThirdPromise()).then(function(message){
+            console.log(message);
+        }).catch(function(error){
+            console.log(error)
+        }).finally(function(){
+            console.log("Completed")
+        })
+        )
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

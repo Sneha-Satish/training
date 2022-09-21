@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hero=Object.create(null);
+        Object.defineProperty(hero,"title",{value:"batman",writable:true,enumerable:true,configurable:true});
+        console.log(hero.title);
+        hero.title="joker";
+        console.log(hero.title);
+        console.log(hero.version);
+
+        for(var prop in hero){
+            console.log(prop,hero[prop]);
+        };
+
+        Object.defineProperty(hero,"title",{value:"joker",writable:false,enumerable:false,configurable:false});
+        console.log("-----------------------------");
+
+        for(var prop in hero){
+            console.log(prop,hero[prop]);
+        };
+
+    // writable changes the value
+    // configurable changes the whole object decsription.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

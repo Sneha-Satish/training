@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var favNums=[2,5,3,4,9,7,6];
+        // //var itr=favNums[Symbol.iterator]();
+        // var itr=favNums.values();
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log("...................");
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+        // console.log(itr.next());
+
+        setInterval(function(){
+            favNums.push=(Math.round(Math.random()*20));
+            document.getElementById("log").innerText=favNums.join();
+        },1000);
+
+        var itr=favNums.values();
+        function callFun(){
+            console.log(itr.next().value);
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="callFun()"> Get value </button>
+    <p id="log"></p>
+</body>
+</html>
