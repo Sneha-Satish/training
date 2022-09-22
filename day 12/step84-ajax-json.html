@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    button{
+        width: 500px;
+        display: block;
+        margin:10px auto;
+        background-color: antiquewhite;
+    }
+    .container{
+        width: 880px;
+        height:250px;
+        background-color:aquamarine;
+        margin: 10px auto;
+        padding: 5px;
+        overflow: auto;
+        
+        display: table;
+        
+        
+    }
+    .container div{
+        width: 420px;
+        background-color: aliceblue;
+        color: black;
+        padding: 5px;
+        margin: 5px;
+        float: left;
+    }
+
+    .container div:hover{
+        background-color: lightblue;
+    }
+    </style>
+
+    <script>
+       var xhr=new XMLHttpRequest();
+       xhr.addEventListener("readystatechange",xhrhandler);
+       function xhrhandler(evt){
+        if(evt.target.readyState==4){
+            for(var i=0; i<JSON.parse(evt.target.responseText).root.participant.length;i++){ //to find length
+            
+            JSON.parse(evt.target.responseText).root.participant.forEach(val => { // to take each val
+                document.getElementsByClassName("container")[0].innerHTML+=document.getElementById("mytemp").innerHTML
+                   .replace("{firstname}",val.firstname)
+                   .replace("{lastname}",val.lastname)
+                   .replace("{email}",val.email)
+                   .replace("{city}",val.city);
+                
+                
+            })
+            }
+        }
+       }
+       function clickHandler(){
+        xhr.open("get","data.json",true);
+        xhr.send();
+       }
+
+       function init(){
+        document.querySelector("button").addEventListener("click",clickHandler);
+       }
+       
+
+       document.addEventListener("DOMContentLoaded",init);
+    </script>
+</head>
+<body>
+    <button> Get data </button>
+    <div class="container"> </div>
+    <template id="mytemp">
+        <div>
+            <h1> {firstname} {lastname} <h1>
+                <h2>eMail: {email} </h2>
+                <h3>City: {city} </h3>
+        </div>
+        
+    </template>
+</body>
+</html>
