@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.6.1.js"> </script>
+    <script>
+        $(function(){
+            $("button").eq(1).on("click",function(){
+                $(".container").show();
+            })
+            $("button").eq(2).on("click",function(){
+                $(".container").hide();
+            })
+            $("button").eq(3).on("click",function(){
+                $(".container").fadeOut();
+            })
+            $("button").eq(4).on("click",function(){
+                $(".container").fadeIn();
+            })
+            $("button").eq(5).on("click",function(){
+                $(".container").show in 1000();
+            })
+            $("button").eq(6).on("click",function(){
+                $(".container").hide in 1000();
+            })
+            $("button").eq(7).on("click",function(){
+                $(".container").toggle();
+            })
+        })
+    </script>
+</head>
+<body>
+    <button> Show </button>
+    <button> hide </button>
+    <button> fadeOut </button>
+    <button> fadeIn </button>
+    <button> toggle </button>
+    <button> Show </button>
+    <div class="container"></div>
+</body>
+</html>

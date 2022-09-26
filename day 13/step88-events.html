@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: blueviolet;
+            margin: 100px auto;
+            width: 900px;
+            height: 700px;
+
+        }
+        .box{
+            background-color: aliceblue;
+            width: 100px;
+            height: 100px;
+            margin: 10px ;
+            float: left;
+        }
+    </style>
+    <script src="lib/jquery-3.6.1.js"> </script>
+    <script>
+       
+       $(function(){
+        $(".box").click(function(){
+            alert("you clicked on me");
+        })
+
+       })
+        
+
+       
+    </script>
+</head>
+<body>
+    <button class="box"> click me </button>
+    <div class="container">
+        <div class="box"></div> 
+    </div>
+    
+</body>
+</html>
